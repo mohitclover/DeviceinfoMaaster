@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_nav_header_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/animation_list"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="80dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_smartphone"
+        android:tint="@color/font_white"/>
+
+    <TextView
+        android:id="@+id/tv_device_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/lato_black"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/font_white"
+        android:textSize="18sp"
+        tools:ignore="MissingPrefix"
+        tools:targetApi="jelly_bean" />
+
+    <TextView
+        android:id="@+id/tv_model_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/lato_regular"
+        android:textAlignment="center"
+        android:textColor="@color/font_white"
+        android:textSize="14sp"
+        tools:targetApi="jelly_bean" />
+</LinearLayout>

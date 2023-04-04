@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:airbnb="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        airbnb:lottie_autoPlay="true"
+        airbnb:lottie_cacheStrategy="strong"
+        airbnb:lottie_enableMergePathsForKitKatAndAbove="true"
+        airbnb:lottie_fileName="camera_anim.json"
+        airbnb:lottie_loop="true"
+        tools:targetApi="lollipop" />
+
+    <LinearLayout
+        android:id="@+id/ll_parent_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tv_rear_camera"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".7"
+            android:background="@drawable/rectangle_fill"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/rear_camera"
+            android:textColor="@color/font_white"
+            tools:ignore="MissingPrefix"
+            tools:targetApi="jelly_bean" />
+
+        <TextView
+            android:id="@+id/tv_front_camera"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".7"
+            android:background="@drawable/rectangle_unfill"
+            android:fontFamily="@font/lato_regular"
+            android:gravity="center"
+            android:text="@string/front_camera"
+            android:textColor="@color/orange"
+            tools:ignore="MissingPrefix"
+            tools:targetApi="jelly_bean" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        custom:cardUseCompatPadding="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_Camera_Features"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
+
+    <ScrollView
+        android:id="@+id/textAreaScroller"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_camera_feature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="@color/primary_text"
+            android:textSize="14sp" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_permission_denny_msg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/secondary_text"
+        android:textSize="14sp" />
+</LinearLayout>

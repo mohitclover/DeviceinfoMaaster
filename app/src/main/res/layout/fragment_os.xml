@@ -1,0 +1,288 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:id="@+id/iv_os_ver_ic"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_android_logo" />
+
+            <TextView
+                android:id="@+id/tv_version_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="5dp"
+                android:textAllCaps="true"
+                android:textColor="@color/darkBlue"
+                android:textSize="17sp"
+                android:fontFamily="@font/lato_black"
+                tools:ignore="MissingPrefix"
+                tools:targetApi="jelly_bean" />
+
+            <TextView
+                android:id="@+id/tv_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/darkBlue"
+                android:textSize="12sp"
+                android:fontFamily="@font/lato_light"
+                tools:ignore="MissingPrefix"
+                tools:targetApi="jelly_bean" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="UselessParent">
+
+                <TableRow android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/version"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean" />
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="4"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        tools:ignore="MissingPrefix"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/version_name"
+                        android:textColor="@color/secondary_text"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_sdk_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="4"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        tools:ignore="MissingPrefix" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/api_level"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_api_level"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="4"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        tools:ignore="MissingPrefix" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/build_id"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_build_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="4"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        tools:ignore="MissingPrefix" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/build_name"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_build_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="4"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        tools:ignore="MissingPrefix" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_marginTop="10dp"
+                    android:gravity="start">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="5"
+                        android:maxLines="4"
+                        android:text="@string/fingerprint"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        android:textColor="@color/secondary_text"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_fingerprint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="end"
+                        android:gravity="start"
+                        android:maxEms="4"
+                        android:maxLines="6"
+                        android:textColor="@color/primary_text"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/lato_regular"
+                        tools:targetApi="jelly_bean"
+                        tools:ignore="MissingPrefix" />
+                </TableRow>
+            </TableLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
